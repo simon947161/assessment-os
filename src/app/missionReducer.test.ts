@@ -46,6 +46,54 @@ describe("mission reducer", () => {
     expect(second.progress[hazard.id].points).toBe(0);
   });
 
+  it("awards one point for the safest answer after a retry", () => {
+    const hazard = hazards[0];
+    const first = missionReducer(createInitialState(), {
+      type: "answer",
+      hazardId: hazard.id,
+      optionId: "unsafe",
+      isBest: false,
+    });
+    const corrected = missionReducer(first, {
+      type: "answer",
+      hazardId: hazard.id,
+      optionId: "best",
+      isBest: true,
+    });
+
+    expect(corrected.progress[hazard.id]).toMatchObject({
+      attempts: 2,
+      status: "mastered",
+      points: 1,
+    });
+  });
+
+  it("does not allow a resolved hazard to change score", () => {
+    const hazard = hazards[0];
+    const mastered = missionReducer(createInitialState(), {
+      type: "answer",
+      hazardId: hazard.id,
+      optionId: "best",
+      isBest: true,
+    });
+    const repeated = missionReducer(mastered, {
+      type: "answer",
+      hazardId: hazard.id,
+      optionId: "unsafe",
+      isBest: false,
+    });
+
+    expect(repeated).toBe(mastered);
+    expect(totalScore(repeated)).toBe(2);
+  });
+
+  it("does not complete an unfinished mission", () => {
+    const state = missionReducer(createInitialState(), { type: "complete" });
+
+    expect(state.phase).toBe("entry");
+    expect(canComplete(state)).toBe(false);
+  });
+
   it("gates completion until every hazard is resolved", () => {
     const resolved = hazards.reduce(
       (state, hazard) =>
