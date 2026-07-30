@@ -262,6 +262,7 @@ function DecisionPanel({
   const selectedOption = hazard.options.find(
     (option) => option.id === progress.lastOptionId,
   );
+  const bestOption = hazard.options.find((option) => option.isBest);
 
   return (
     <>
@@ -310,6 +311,11 @@ function DecisionPanel({
               <span className={`consequence ${hazard.consequence}`}>
                 Consequence: {consequenceLabels[hazard.consequence]}
               </span>
+              {progress.status === "review" && bestOption && (
+                <p className="best-action">
+                  <strong>Safest action:</strong> {bestOption.label}
+                </p>
+              )}
               <p className="takeaway">{hazard.takeaway}</p>
             </>
           )}

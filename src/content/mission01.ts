@@ -38,7 +38,15 @@ export const hazards: Hazard[] = [
         id: "step-over",
         label: "Tell people to step over it for now.",
         isBest: false,
-        feedback: "Not yet. A warning leaves the cable across the walkway.",
+        feedback:
+          "Not yet. Stepping over it solves the problem for one person and leaves it for everyone else.",
+      },
+      {
+        id: "cover-with-rag",
+        label: "Put a rag over it so people notice the cable.",
+        isBest: false,
+        feedback:
+          "That adds another trip hazard. The lead still needs to be rerouted or properly protected.",
       },
     ],
     takeaway: "Control the walkway hazard for everyone, not just the next person.",
@@ -64,6 +72,13 @@ export const hazards: Hazard[] = [
         isBest: false,
         feedback: "Not safe. Exposure is not an identification method.",
       },
+      {
+        id: "use-small-amount",
+        label: "Try a small amount on a test surface.",
+        isBest: false,
+        feedback:
+          "Not safe. A smaller mystery chemical is still a mystery chemical.",
+      },
     ],
     takeaway: "If the label is missing, stop and have the substance identified.",
     sourceConcept: "Chemical identification, labels, SDS and reporting.",
@@ -86,7 +101,15 @@ export const hazards: Hazard[] = [
         id: "walk-around",
         label: "Leave it until the current task is finished.",
         isBest: false,
-        feedback: "Not yet. The spill remains a hazard while work continues.",
+        feedback:
+          "Not yet. Walking around a spill does not turn it into a control measure.",
+      },
+      {
+        id: "cover-spill",
+        label: "Cover it with cardboard and keep the area moving.",
+        isBest: false,
+        feedback:
+          "That hides the spill without controlling it. Keep people away and use the correct spill response.",
       },
     ],
     takeaway: "A spill needs control, not a wider step around it.",
@@ -110,7 +133,15 @@ export const hazards: Hazard[] = [
         id: "work-faster",
         label: "Finish quickly so the container can be closed.",
         isBest: false,
-        feedback: "Not safe. Working faster does not control hazardous vapour.",
+        feedback:
+          "Not safe. Working faster does not control hazardous vapour.",
+      },
+      {
+        id: "open-door-only",
+        label: "Open the door and continue without checking the controls.",
+        isBest: false,
+        feedback:
+          "Not enough. Ventilation must be suitable for the product and the work, not just feel less stuffy.",
       },
     ],
     takeaway: "Control airborne exposure before solvent-based work continues.",
@@ -136,6 +167,13 @@ export const hazards: Hazard[] = [
         isBest: false,
         feedback: "Not enough. A person holding it does not fix unsuitable equipment.",
       },
+      {
+        id: "quick-job",
+        label: "Use it once because the job will only take a minute.",
+        isBest: false,
+        feedback:
+          "Not safe. “It’ll only take a minute” is not a ladder rating.",
+      },
     ],
     takeaway: "Use sound, stable access equipment before starting work at height.",
     sourceConcept: "Ladder condition, positioning and suitable access equipment.",
@@ -158,7 +196,14 @@ export const hazards: Hazard[] = [
         id: "look-away",
         label: "Look away from the tool while the dust clears.",
         isBest: false,
-        feedback: "Not safe. Looking away is not eye protection.",
+        feedback: "Not safe. Squinting is not certified eye protection.",
+      },
+      {
+        id: "finish-section",
+        label: "Finish this small section, then put the PPE on.",
+        isBest: false,
+        feedback:
+          "The exposure has already started. Stop and put the controls in place first.",
       },
     ],
     takeaway: "PPE must be suitable, fitted and used before exposure starts.",
@@ -184,6 +229,13 @@ export const hazards: Hazard[] = [
         isBest: false,
         feedback: "Not yet. An emergency will not wait for the shift to end.",
       },
+      {
+        id: "leave-gap",
+        label: "Leave a narrow gap that people can squeeze through.",
+        isBest: false,
+        feedback:
+          "Not enough. An emergency exit is not bonus storage, even with a gap.",
+      },
     ],
     takeaway: "Emergency routes are never temporary storage.",
     sourceConcept: "Emergency access, housekeeping and evacuation.",
@@ -207,6 +259,13 @@ export const hazards: Hazard[] = [
         label: "Leave the stack if nobody needs that corner.",
         isBest: false,
         feedback: "Not safe. Poor storage can fail without anyone touching it.",
+      },
+      {
+        id: "restack-higher",
+        label: "Restack the tins higher to clear more floor space.",
+        isBest: false,
+        feedback:
+          "That may make the stack less stable. A tower of paint tins is not a shelving system.",
       },
     ],
     takeaway: "Store materials securely and follow their label and SDS requirements.",
@@ -232,6 +291,13 @@ export const hazards: Hazard[] = [
         isBest: false,
         feedback: "Not safe. Care does not replace a required guard.",
       },
+      {
+        id: "tell-next-worker",
+        label: "Finish the cut, then tell the next worker about the guard.",
+        isBest: false,
+        feedback:
+          "Not safe. Isolate defective equipment now so nobody can use it.",
+      },
     ],
     takeaway: "Never use equipment with a missing or defeated safety guard.",
     sourceConcept: "Equipment inspection, guarding, isolation and reporting.",
@@ -255,6 +321,13 @@ export const hazards: Hazard[] = [
         label: "Call out a warning whenever someone comes close.",
         isBest: false,
         feedback: "Not enough. The work zone needs a control that is always present.",
+      },
+      {
+        id: "single-sign",
+        label: "Put one sign inside the work area where it will stay clean.",
+        isBest: false,
+        feedback:
+          "People need the warning before they enter. Put the boundary and signs where they control access.",
       },
     ],
     takeaway: "People need a clear boundary before they enter the hazard area.",

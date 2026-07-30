@@ -391,6 +391,11 @@ h1 {
   font-weight: 750;
 }
 
+.best-action {
+  padding-top: 10px;
+  border-top: 1px solid rgba(23, 35, 33, 0.24);
+}
+
 .completion-callout {
   max-width: 1440px;
   margin: 20px auto 0;
