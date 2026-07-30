@@ -10,7 +10,7 @@ The first deliverable is a short interactive learning experience based on CPCCWH
 
 ## Immediate delivery goal
 
-Build and publish a small working prototype that Dan can test with learners as soon as possible.
+Build and publish a small working prototype that Dean can test with learners as soon as possible.
 
 ## MVP v0.1
 
@@ -26,8 +26,35 @@ Build and publish a small working prototype that Dan can test with learners as s
 
 `SPOT → THINK → CONTROL → ACT → REPORT`
 
+## Run locally
+
+```powershell
+npm install
+npm run dev
+```
+
+Validation:
+
+```powershell
+npm test
+npm run build
+npm run preview
+```
+
+## Public pilot
+
+Expected URL: <https://simon947161.github.io/assessment-os/>
+
+The site is deployed as a static Vite application. It stores anonymous mission
+progress in the current browser session only.
+
+## Project records
+
+- [`PROJECT_CHARTER.md`](PROJECT_CHARTER.md)
+- [`docs/CODEX_IMPLEMENTATION_BRIEF.md`](docs/CODEX_IMPLEMENTATION_BRIEF.md)
+- [`docs/CONTENT_VALIDATION_REVIEW.md`](docs/CONTENT_VALIDATION_REVIEW.md)
+- [`docs/DEAN_PILOT_GUIDE.md`](docs/DEAN_PILOT_GUIDE.md)
+
 ## Status
 
-`PROJECT INITIALISED — RAPID DELIVERY MODE`
-
-See [`PROJECT_CHARTER.md`](PROJECT_CHARTER.md) and [`docs/CODEX_IMPLEMENTATION_BRIEF.md`](docs/CODEX_IMPLEMENTATION_BRIEF.md).
+`WHS LIVING BOOK v0.1 — FOUNDER REVIEW PENDING`

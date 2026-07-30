@@ -1,0 +1,14 @@
+# Private source material — never publish or commit.
+/CPCCWHS2001 - Apply WHS Requirements.docx
+
+# Local dependencies and generated output.
+/node_modules/
+/dist/
+/coverage/
+
+# Local environment and editor files.
+/.env
+/.env.*
+!.env.example
+.DS_Store
+Thumbs.db
